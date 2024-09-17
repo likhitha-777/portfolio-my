@@ -55,7 +55,8 @@ export default function Home() {
   return (
     <Container>
       {/* Intro Section */}
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} alignItems="center" justifyContent="center" py={5}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} alignItems="center" justifyContent="center"
+  sx={{ mt: 8 }}>
         <Box flex={1} display="flex" justifyContent="center" sx={{
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
