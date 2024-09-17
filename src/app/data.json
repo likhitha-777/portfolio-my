@@ -1,0 +1,82 @@
+{
+    "home": {
+      "intro": {
+        "image": {
+          "src": "/profile_img.jpg",
+          "alt": "Profile Image",
+          "width": 500,
+          "height": 500,
+          "borderRadius": "10px"
+        },
+        "heading": "Welcome to My Portfolio",
+        "description": "Hi, I'm Likhitha, a passionate web developer specializing in building efficient and scalable web applications. Explore my projects and learn more about what I do.",
+        "buttons": [
+          {
+            "label": "About Me",
+            "link": "#about",
+            "variant": "contained",
+            "color": "primary"
+          },
+          {
+            "label": "See My Projects",
+            "link": "#projects",
+            "variant": "outlined",
+            "color": "primary"
+          }
+        ]
+      },
+      "aboutSection": {
+        "id": "about",
+        "title": "About Me",
+        "content": "Hi, I'm Likhitha, a passionate web developer with years of experience in building efficient and scalable web applications. I specialize in front-end and back-end technologies, with a strong focus on delivering high-quality user experiences. Over the years, I have worked on a wide range of projects, from simple landing pages to complex applications used by thousands of users. I believe in the power of collaboration and continuous learning. Outside of coding, I enjoy exploring new technologies, reading tech blogs, and contributing to open-source projects. Let's build something amazing together!",
+        "moreButton": {
+          "label": "More About Me",
+          "link": "/about",
+          "variant": "outlined",
+          "color": "primary"
+        }
+      },
+      "blogsSection": {
+        "title": "Latest Blogs",
+        "items": [
+          {
+            "title": "Technical Skills",
+            "content": [
+              "React JS",
+              "Next JS",
+              "C",
+              "MERN Stack",
+              "REST API",
+              "GraphQL",
+              "Postman",
+              "Vercel deployment",
+              "WIX UI"
+            ]
+          },
+          {
+            "title": "Academic Achievements",
+            "content": [
+              "District level volleyball player",
+              "District level Throwball player",
+              "Represented my college in Handball",
+              "Yakshagana artist during school and college level"
+            ]
+          },
+          {
+            "title": "Work Experiences",
+            "content": [
+              "Internship at Embitel Technologies, Bangalore (2022)",
+              "1+ years of experience as a full-time employee at Embitel Technologies, Bangalore"
+            ]
+          }
+        ],
+        "moreButton": {
+          "label": "More Blogs",
+          "link": "/blog",
+          "variant": "outlined",
+          "color": "primary"
+        }
+      }
+    }
+  }
+  
