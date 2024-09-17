@@ -72,7 +72,14 @@ export default function Home() {
             style={{ borderRadius: home.intro.image.borderRadius }}
           />
         </Box>
-        <Box flex={1} padding={2} >
+        <Box flex={1} padding={2} sx={{
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                }} >
           <Typography variant="h2" gutterBottom>
             {home.intro.heading}
           </Typography>
