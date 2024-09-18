@@ -15,6 +15,7 @@ export default function Contact() {
       justifyContent="center"
       alignItems="center"
       spacing={5}
+      
       sx={{ my: 8, maxWidth: '500px', mx: 'auto' }} // Center and limit width
     >
       {/* Heading */}
@@ -24,16 +25,13 @@ export default function Contact() {
 
       {/* Social Media Links */}
       <Typography variant="h5" align="center" sx={{ mb: 2 }}>Social Media</Typography>
-
+      
       <Box
-        sx={{
-          cursor: "pointer",
-          backgroundColor: "#f9f9f9",
-          p: 2,
-          borderRadius: 2,
-          width: "100%", // Full width for uniform look
-          '&:hover': { backgroundColor: "#e8e8e8" },
-        }}
+        sx={{ cursor: 'pointer', backgroundColor: "#f9f9f9",
+        p: 2,
+        borderRadius: 2,
+        width: "100%", // Full width for uniform look
+        '&:hover': { backgroundColor: "#e8e8e8" }, transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}
       >
         <Link href="https://www.instagram.com/" passHref target="_blank">
           <Stack direction="row" spacing={2} alignItems="center">
@@ -44,14 +42,12 @@ export default function Contact() {
       </Box>
 
       <Box
-        sx={{
-          cursor: "pointer",
-          backgroundColor: "#f9f9f9",
-          p: 2,
-          borderRadius: 2,
-          width: "100%",
-          '&:hover': { backgroundColor: "#e8e8e8" },
-        }}
+        sx={{ cursor: 'pointer', backgroundColor: "#f9f9f9",
+        p: 2,
+        borderRadius: 2,
+        width: "100%", // Full width for uniform look
+        '&:hover': { backgroundColor: "#e8e8e8" }, transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}
+        
       >
         <Link href="https://github.com/" passHref target="_blank">
           <Stack direction="row" spacing={2} alignItems="center">
@@ -62,14 +58,11 @@ export default function Contact() {
       </Box>
 
       <Box
-        sx={{
-          cursor: "pointer",
-          backgroundColor: "#f9f9f9",
-          p: 2,
-          borderRadius: 2,
-          width: "100%",
-          '&:hover': { backgroundColor: "#e8e8e8" },
-        }}
+        sx={{ cursor: 'pointer', backgroundColor: "#f9f9f9",
+        p: 2,
+        borderRadius: 2,
+        width: "100%", // Full width for uniform look
+        '&:hover': { backgroundColor: "#e8e8e8" }, transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}
       >
         <Link href="https://www.linkedin.com/in/your-linkedin-profile" passHref target="_blank">
           <Stack direction="row" spacing={2} alignItems="center">
@@ -83,14 +76,11 @@ export default function Contact() {
       <Typography variant="h5" align="center" sx={{ mt: 4, mb: 2 }}>Contact Me</Typography>
 
       <Box
-        sx={{
-          cursor: "pointer",
-          backgroundColor: "#f9f9f9",
-          p: 2,
-          borderRadius: 2,
-          width: "100%",
-          '&:hover': { backgroundColor: "#e8e8e8" },
-        }}
+        sx={{ cursor: 'pointer', backgroundColor: "#f9f9f9",
+        p: 2,
+        borderRadius: 2,
+        width: "100%", // Full width for uniform look
+        '&:hover': { backgroundColor: "#e8e8e8" }, transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}
       >
         <Link href="mailto:youremail@example.com" passHref>
           <Stack direction="row" spacing={2} alignItems="center">
@@ -101,14 +91,11 @@ export default function Contact() {
       </Box>
 
       <Box
-        sx={{
-          cursor: "pointer",
-          backgroundColor: "#f9f9f9",
-          p: 2,
-          borderRadius: 2,
-          width: "100%",
-          '&:hover': { backgroundColor: "#e8e8e8" },
-        }}
+        sx={{ cursor: 'pointer', backgroundColor: "#f9f9f9",
+        p: 2,
+        borderRadius: 2,
+        width: "100%", // Full width for uniform look
+        '&:hover': { backgroundColor: "#e8e8e8" }, transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}
       >
         <Link href="tel:+1234567890" passHref>
           <Stack direction="row" spacing={2} alignItems="center">

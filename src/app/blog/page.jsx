@@ -11,6 +11,11 @@ export default function Home() {
   const [home, setHome] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showMoreSkills, setShowMoreSkills] = useState(false);
+
+  const handleShowMoreSkills = () => {
+    setShowMoreSkills((prev) => !prev); // Toggle the state
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -47,35 +52,62 @@ export default function Home() {
 
   return (
     <Container>
-      <Box my={10}>
-        <Typography variant="h3" gutterBottom textAlign='center'>
-          {home.blogsSection.title}
-        </Typography>
-        <Grid container spacing={4} my={3}>
-          {home.blogsSection.items.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Box p={2} border="1px solid lightgray" borderRadius="8px" sx={{
-                  cursor: 'pointer',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
-                }}>
-                <Typography variant="h5">{item.title}</Typography>
-                <Typography variant="h6" color="textSecondary">
-                  <ul>
-                    {item.content.map((contentItem, i) => (
-                      <li key={i}>{contentItem}</li>
-                    ))}
-                  </ul>
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-        
-      </Box>
+      {home.blogsSection && home.blogsSection.items && (
+        <Box my={15}>
+          <Typography variant="h4" gutterBottom textAlign="center">MY BLOGS</Typography>
+          {/*    */}
+          <Grid container spacing={4}>
+            {home.blogsSection.items.map((item, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}  sx={{ cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}>
+                <Box p={2} border="1.5px solid lightgray" borderRadius="19px" >
+                  <Typography variant="h6">{item.title}</Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {item.title === "Technical Skills" ? (
+                      <ul>
+                        {/* Display the first 5 skills */}
+                        {item.content.slice(0, 6).map((contentItem, i) => (
+                          <li key={i}>{contentItem}</li>
+                        ))}
+                        {/* Conditionally render more skills */}
+                        {showMoreSkills && (
+                          <>
+                            {item.content.slice(5).map((contentItem, i) => (
+                              <li key={i}>{contentItem}</li>
+                              
+                            ))}
+                          </>
+                        )}
+                      </ul>
+                    ) : (
+                      <ul>
+                        {item.content.map((contentItem, i) => (
+                          <li key={i}>
+                            <li>{contentItem}</li>
+                            <li>{contentItem}</li>
+                           
+                          
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </Typography>
+                  {/* Show "More" button for Technical Skills */}
+                  {item.title === "Technical Skills" && (
+                    <Button
+                      variant="text"
+                      color="primary"
+                      onClick={handleShowMoreSkills}
+                    >
+                      {showMoreSkills ? "Show Less" : "More"}
+                    </Button>
+                  )}
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+          
+        </Box>
+      )}
     </Container>
   );
 }

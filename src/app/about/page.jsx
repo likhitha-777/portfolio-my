@@ -45,13 +45,17 @@ export default function About() {
   return (
     <Container>
       {/* About Me Section */}
-      <Box id={aboutData.aboutSection.id} my={6} display="flex" justifyContent="center" textAlign="center">
+      <Box id={aboutData.aboutSection.id} my={6} display="flex" justifyContent="center" textAlign="center" sx={{ cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' } }}>
         <Box maxWidth="800px" px={4}>
           <Typography variant="h3" gutterBottom>
             {aboutData.aboutSection.title}
           </Typography>
-          <Typography variant="body1" paragraph style={{ textAlign: 'justify', fontSize: '20px' }}>
+          <Typography variant="body1" paragraph style={{ textAlign: 'justify' }}>
             {aboutData.aboutSection.content}
+            I've honed my expertise in a wide range of technologies, including React JS, Next.js, Node.js, and the MERN stack. I have a keen interest in developing interactive user interfaces, building robust REST APIs, and ensuring responsive design principles. My projects span across diverse domains, from e-commerce platforms and content management systems to more complex enterprise-level applications.
+
+Over the years, I’ve worked on projects of various scales—from small, personal websites to large, data-driven applications used by thousands of users daily.
+My ability to collaborate effectively with cross-functional teams has allowed me to deliver projects on time while meeting high standards of quality and performance
           </Typography>
         </Box>
       </Box>
